@@ -1,9 +1,8 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This README would normally contain some information about me and my app, but since i created more than three apps to get rails and heroku started, i don't think i will type much more in here. :P
 
-Things you may want to cover:
+Things i could cover:
 
 * Ruby version
 
@@ -24,5 +23,5 @@ Things you may want to cover:
 * ...
 
 
-Please feel free to use a different markup language if you do not plan to run
+
 <tt>rake doc:app</tt>.
