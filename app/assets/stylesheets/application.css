@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  padding-top: 70px;
+}
+
+#product {
+  margin: 15px 15px;
+
+}
+
+#home {
+  margin: 15px 15px;
+}
