@@ -30,6 +30,7 @@
       <ul class="nav navbar-nav">
         <li class="active" id="home"><p><%= link_to "Home", static_pages_index_path %><span class="sr-only">(current)</span></p></li>
         <li id="product"><p><%= link_to "Products", products_path %></p></li>
+        <li id="contact"><p><%= link_to "Contact", static_pages_contact_path %></p></li>
       </ul>
       <form class="navbar-form navbar-right" role="search">
         <%= form_tag("/products", method: "get") do %>

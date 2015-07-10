@@ -76,4 +76,14 @@ class ProductsController < ApplicationController
     def product_params
       params.require(:product).permit(:name, :description, :image_url, :colour, :prize)
     end
+
+    def thank_you
+      @name = params[:name]
+      @email = params[:email]
+      @message = params[:message]
+      ActionMailer::Base.mail(:from => @email,
+        :to => 'f.heger@zeppelin-university.net',
+        :subject => "A new contact form message from #{@name}",
+        :body => @message).deliver
+    end
 end
