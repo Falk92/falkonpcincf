@@ -46,3 +46,5 @@ group :production do
 end
 
 gem 'rack-cache'
+
+gem 'devise'

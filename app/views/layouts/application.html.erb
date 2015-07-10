@@ -27,10 +27,15 @@
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav" id="left">
         <li class="active" id="home"><p><%= link_to "Home", static_pages_index_path %><span class="sr-only">(current)</span></p></li>
         <li id="product"><p><%= link_to "Products", products_path %></p></li>
         <li id="contact"><p><%= link_to "Contact", static_pages_contact_path %></p></li>
+        <li id="log"><p><% if user_signed_in? %>
+            <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+        <% else %>
+            <%= link_to('Login', new_user_session_path) %>
+        <% end %></p></li>
       </ul>
       <form class="navbar-form navbar-right" role="search">
         <%= form_tag("/products", method: "get") do %>
@@ -42,6 +47,9 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
 
 <h1>Welcome to the Online-Store Store</h1>
 <h2>Your source for Online-Stores in Germany.</h2>
