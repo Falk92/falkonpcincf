@@ -48,3 +48,5 @@ end
 gem 'rack-cache'
 
 gem 'devise'
+
+gem 'cancancan'
