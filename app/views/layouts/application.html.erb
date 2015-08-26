@@ -30,16 +30,29 @@
         <li class="active" id="home"><p><%= link_to "Home", static_pages_index_path %><span class="sr-only">(current)</span></p></li>
         <li id="product"><p><%= link_to "Products", products_path %></p></li>
         <li id="contact"><p><%= link_to "Contact", static_pages_contact_path %></p></li>
-        <li id="log"><p>
-        <% if user_signed_in? %>
-          <li>
-          <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-          </li>
-        <% else %>
-          <li>
-          <%= link_to('Login', new_user_session_path) %>
-          </li>
-        <% end %></p></li>
+        <li id="dropdown">
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              User Settings
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li id="log"><p>
+                <% if user_signed_in? %>
+                <li>
+                  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+                </li>
+                <% else %>
+                <li>
+                  <%= link_to('Login', new_user_session_path) %>
+                </li>
+                <% end %></p>
+              </li>
+              <li><%= link_to "Change your password", edit_user_registration_path %></li>
+              <li><%= link_to "Change your mail", edit_user_registration_path %></li>
+            </ul>
+          </div>
+        </li>  
       </ul>
       <form class="navbar-form navbar-right" role="search">
         <%= form_tag("/products", method: "get") do %>
