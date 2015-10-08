@@ -25,11 +25,19 @@ h2 {
 }
 
 img {
-  display: block;
+
   margin-left: auto;
   margin-right: auto;
 }
 
 .carousel-caption {
   color: red;
+}
+
+.commentandrating {
+  display: inline !important;
+}
+
+.rating {
+  display: inline !important;
 }
