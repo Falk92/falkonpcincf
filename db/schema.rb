@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20151010133249) do
-=======
-ActiveRecord::Schema.define(version: 20150827114055) do
->>>>>>> master
 
   create_table "comments", force: true do |t|
     t.integer  "user_id"
@@ -54,10 +50,7 @@ ActiveRecord::Schema.define(version: 20150827114055) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-<<<<<<< HEAD
     t.boolean  "admin"
-=======
->>>>>>> master
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
