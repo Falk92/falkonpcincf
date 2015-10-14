@@ -56,3 +56,5 @@ gem 'devise'
 gem 'cancancan'
 
 gem "factory_girl_rails", "~> 4.0"
+#payment:
+gem 'stripe'
