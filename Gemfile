@@ -9,6 +9,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'guard-rspec', require: false
   gem 'guard-spork'
+  gem 'byebug'
 end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
