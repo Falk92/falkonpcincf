@@ -21,4 +21,11 @@
 
 <br>
 
-<%= link_to 'New Product', new_product_path %>
+<%= link_to 'New Product', new_product_path %> </br>
+</br>
+<% cache do %>
+  All available products:
+  <% Product.all.each do |p| %>
+    <%= link_to p.name, product_url(p) %>
+  <% end %>
+<% end %>

@@ -61,3 +61,5 @@ gem "factory_girl_rails", "~> 4.0"
 gem 'stripe'
 #secuirity
 gem 'brakeman', :require => false
+
+gem 'dalli'
