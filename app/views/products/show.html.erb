@@ -1,7 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-
-<%= image_tag(@product.image_url, class: "img-zoom") %>
+<div class="col-md-4"><%= image_tag(@product.image_url, width: "350", class: "img-zoom", data_zoom_image: @product.image_url) %></div>
 
 <p>
   <strong>Name:</strong>
