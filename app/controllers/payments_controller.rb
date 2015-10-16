@@ -4,7 +4,7 @@ class PaymentsController < ApplicationController
     product = Product.find(params[:product_id])
     begin
       charge = Stripe::Charge.create(
-        :amount => 20000, # amount in cents
+        :amount => @product.prize*100000, # amount in cents
         :currency => "usd",
         :source => token,
         :description => params[:stripeEmail]
